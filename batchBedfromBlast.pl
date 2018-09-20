@@ -6,7 +6,7 @@ use warnings;
 #This script generates a bed file from blast output
 #Assumes you want to pull seqs out of the blast db - modify line 12 if you want to pull seqs from the query
 #assumes you have blast tabular output saved as *.out
-#L. Eserman 2016, leserman@uga.edu, (with help from A. Harkess and M. Hwang)
+#L. Eserman 2016, leserman@uga.edu, (with help from M. Hwang)
 
 while (my $blastfile = glob("*.out")) {
     system "awk '{print \$2,\"\t\",\$9,\"\t\",\$10,\"\t\",\$1}' $blastfile > $blastfile.bed";
