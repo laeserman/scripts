@@ -5,7 +5,7 @@ use strict;
 #run in directory where reads are located
 
 my $adapters = $ARGV[0]; #file with adapter sequences you wish to trim, one per line
-my $list = $ARGV[1]; #read to ID index file, see manual for example
+my $list = $ARGV[1]; #read to ID index file
 my %read1;
 my %read2;
 my @libIDs;
