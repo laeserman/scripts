@@ -4,6 +4,9 @@ use strict;
 #Modified from a script from Karolina Heyduk
 
 #run in directory where reads are located
+#list should be tab delimited, R1 and R2 files should be on separate lines
+#libID     libID_R1.fasta
+#libID     libID_R2.fasta
 
 my $list = $ARGV[0]; #read to ID index file
 my %read1;
