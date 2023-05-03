@@ -50,6 +50,7 @@ scatter(pca1, posi="bottomright")
 
 #plot PCA with 2 pop assignments
 col <- funky(2)
+#edit the xax and yax values if you want to visualize other PC axes
 s.class(pca1$scores, pop(x), xax=1, yax=2, col=transp(col,.6), axesell=FALSE, cstar=0, cpoint=3, grid=FALSE)
 add.scatter.eig(pca1$eig,2,1,2)
 
