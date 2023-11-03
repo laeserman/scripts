@@ -1,4 +1,4 @@
-#This perl script written by ChatGPT using the prompt "Write a perl script to load in a fasta file, extract the longest DNA sequence, and write the output to a new file. Use the bioperl module"
+#This perl script written by ChatGPT using the prompt "Write a perl script to load in a fasta file, extract the longest DNA sequence, and write the output to a new file. Use the bioperl module" with subsequent manual edits by Lauren Eserman-Campbell
 
 use strict;
 use Bio::SeqIO;
