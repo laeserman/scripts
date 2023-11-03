@@ -1,3 +1,5 @@
+#Script from https://github.com/lindsawi/HybSeq-SNP-Extraction modified to add memory options  
+
 #!/bin/bash
 ##End of Select Varitants for GATK4
 
