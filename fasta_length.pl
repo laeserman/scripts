@@ -1,3 +1,5 @@
+#Script written using ChatGPT with the prompt "Write a perl script using bioperl to input a fasta file, measure the length of each sequence, output the name of each sequence along with the length"
+
 #!/usr/bin/perl
 use strict;
 use warnings;
