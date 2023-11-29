@@ -1,3 +1,5 @@
+#Script from https://github.com/lindsawi/HybSeq-SNP-Extraction modified by Lauren Eserman-Campbell
+
 #!/bin/bash
 set -eo pipefail
 
