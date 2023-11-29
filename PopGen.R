@@ -12,6 +12,12 @@ data <- read.vcfR("Rchap.passfilter.recode.vcf")
 x <- vcfR2genlight(data)
 rchap <- vcfR2genind(data)
 
+# DAPC --------------------------------------------------------------------
+#Use DAPC to identify the number of clusters in the data
+grp <- find.clusters(rchap, max.n.clust=10)
+dapc1 <- dapc(rchap, grp$grp)
+scatter(dapc1)
+
 # Assign populations to individuals ---------------------------------------
 #Pop assignments with 1=Hosford, 2=Gulf
 pop(rchap) <- as.factor(c("1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "2", "2", "2", "2", "1", "1", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "1", "2", "2", "2", "2"))
@@ -35,6 +41,7 @@ Fbar <- sapply(temp, mean)
 hist(Fbar, col="firebrick", main="Average inbreeding in R chapmanii")
 which(Fbar>0.6)
 
+
 # PCA ---------------------------------------------------------------------
 pca1 <- glPca(x, nf=3)
 scatter(pca1, posi="bottomright")
@@ -50,7 +57,4 @@ add.scatter.eig(pca1$eig,2,1,2)
 #s.class(pca1$scores, pop(x), xax=1, yax=2, col=transp(col,.6), axesell=FALSE, cstar=0, cpoint=3, grid=FALSE)
 #add.scatter.eig(pca1$eig,2,1,2)
 
-# DAPC --------------------------------------------------------------------
-grp <- find.clusters(rchap, max.n.clust=10)
-dapc1 <- dapc(rchap, grp$grp)
-scatter(dapc1)
+
